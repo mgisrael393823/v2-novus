@@ -1,0 +1,307 @@
+/* Pricing Framework Layout System
+   A systematic approach to fix alignment and spacing issues throughout the pricing incentive page
+   This system uses CSS variables, Grid, and Flexbox to ensure consistency across all components
+*/
+
+:root {
+  /* Spacing Scale */
+  --space-xs: 8px;
+  --space-sm: 16px;
+  --space-md: 24px;
+  --space-lg: 32px;
+  --space-xl: 48px;
+  
+  /* Colors */
+  --color-primary: #333333;
+  --color-secondary: #666666;
+  --color-accent: #CAB06B;
+  --color-accent-light: #F9F7F2;
+  --color-accent-highlight: #FBF7EA;
+  --color-accent-dark: #BA9C5A;
+  --color-border: #E5E2D9;
+  --color-white: #FFFFFF;
+  
+  /* Typography */
+  --font-size-xs: 0.75rem;   /* 12px */
+  --font-size-sm: 0.875rem;  /* 14px */
+  --font-size-md: 1rem;      /* 16px */
+  --font-size-lg: 1.125rem;  /* 18px */
+  --font-size-xl: 1.25rem;   /* 20px */
+  --font-size-2xl: 1.5rem;   /* 24px */
+  --font-size-3xl: 1.875rem; /* 30px */
+  
+  /* Font Weights */
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  
+  /* Line Heights */
+  --line-height-tight: 1.25;
+  --line-height-normal: 1.5;
+  --line-height-relaxed: 1.75;
+  
+  /* Shadows */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.05);
+  --shadow-accent: 0 0 12px rgba(202, 176, 107, 0.2);
+  
+  /* Border Radius */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-full: 9999px;
+  
+  /* Transitions */
+  --transition-all: all 0.3s ease;
+}
+
+/* Grid System */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: var(--space-md);
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 var(--space-md);
+}
+
+/* Responsive breakpoints */
+@media (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: repeat(6, 1fr);
+    gap: var(--space-sm);
+    padding: 0 var(--space-sm);
+  }
+}
+
+/* Flexbox Utility Classes */
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.flex-grow {
+  flex-grow: 1;
+}
+
+.flex-shrink-0 {
+  flex-shrink: 0;
+}
+
+/* Spacing Utility Classes */
+.mt-xs { margin-top: var(--space-xs); }
+.mt-sm { margin-top: var(--space-sm); }
+.mt-md { margin-top: var(--space-md); }
+.mt-lg { margin-top: var(--space-lg); }
+.mt-xl { margin-top: var(--space-xl); }
+
+.mb-xs { margin-bottom: var(--space-xs); }
+.mb-sm { margin-bottom: var(--space-sm); }
+.mb-md { margin-bottom: var(--space-md); }
+.mb-lg { margin-bottom: var(--space-lg); }
+.mb-xl { margin-bottom: var(--space-xl); }
+
+.my-xs { margin-top: var(--space-xs); margin-bottom: var(--space-xs); }
+.my-sm { margin-top: var(--space-sm); margin-bottom: var(--space-sm); }
+.my-md { margin-top: var(--space-md); margin-bottom: var(--space-md); }
+.my-lg { margin-top: var(--space-lg); margin-bottom: var(--space-lg); }
+.my-xl { margin-top: var(--space-xl); margin-bottom: var(--space-xl); }
+
+.p-xs { padding: var(--space-xs); }
+.p-sm { padding: var(--space-sm); }
+.p-md { padding: var(--space-md); }
+.p-lg { padding: var(--space-lg); }
+.p-xl { padding: var(--space-xl); }
+
+/* Typography Classes */
+.heading-1 {
+  font-size: var(--font-size-3xl);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-tight);
+  margin-bottom: var(--space-lg);
+}
+
+.heading-2 {
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-tight);
+  margin-bottom: var(--space-md);
+}
+
+.heading-3 {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-tight);
+  margin-bottom: var(--space-sm);
+}
+
+.heading-4 {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-tight);
+  margin-bottom: var(--space-xs);
+}
+
+.text-md {
+  font-size: var(--font-size-md);
+  line-height: var(--line-height-normal);
+}
+
+.text-sm {
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-normal);
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* Card Components */
+.card {
+  background-color: var(--color-white);
+  border-radius: var(--radius-md);
+  padding: var(--space-md);
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition-all);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.card:hover {
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--color-border);
+}
+
+.card-header {
+  margin-bottom: var(--space-md);
+}
+
+.card-content {
+  flex-grow: 1;
+}
+
+.card-footer {
+  margin-top: var(--space-md);
+  padding-top: var(--space-sm);
+  border-top: 1px solid var(--color-border);
+}
+
+/* Price Circle Component */
+.price-circle {
+  width: 96px;
+  height: 96px;
+  border-radius: var(--radius-full);
+  background-color: var(--color-white);
+  border: 4px solid var(--color-accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  box-shadow: var(--shadow-accent);
+}
+
+.price-circle::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: var(--radius-full);
+  background: linear-gradient(to bottom, white, var(--color-accent));
+  opacity: 0.1;
+}
+
+.price-circle-text {
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-accent);
+  z-index: 1;
+}
+
+/* Highlight Styles */
+.highlight {
+  font-weight: var(--font-weight-medium);
+  background-color: var(--color-accent-highlight);
+  padding: 2px 6px;
+  border-radius: var(--radius-sm);
+  color: var(--color-accent-dark);
+}
+
+/* Dividers */
+.divider {
+  height: 1px;
+  width: 100%;
+  background-color: var(--color-border);
+  margin: var(--space-md) 0;
+}
+
+/* Icon Alignment */
+.icon-text {
+  display: flex;
+  align-items: center;
+}
+
+.icon {
+  margin-right: var(--space-sm);
+  flex-shrink: 0;
+  color: var(--color-accent);
+}
+
+/* Equal Height Cards */
+.equal-height-cards {
+  display: grid;
+  grid-auto-rows: 1fr;
+  gap: var(--space-md);
+}
+
+@media (min-width: 768px) {
+  .equal-height-cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Fix for square footage alignment */
+.unit-size {
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: var(--space-md);
+}
+
+/* Consistent Checkmark Lists */
+.check-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.check-list li {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: var(--space-sm);
+}
+
+.check-list li svg {
+  margin-right: var(--space-sm);
+  margin-top: 3px;
+  flex-shrink: 0;
+}

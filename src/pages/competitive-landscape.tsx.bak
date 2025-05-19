@@ -1,0 +1,588 @@
+import React from "react";
+import Head from "next/head";
+import Layout from "@/components/Layout/Layout";
+import { Building, Users, Zap, Award, BarChart, Target, TrendingUp, MapPin, Diamond, Check, Star, ArrowRight } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { motion } from "framer-motion";
+import { CompetitorCard, CompetitorProfile } from "@/components/ui/CompetitorCard";
+import { MatrixComparisonTable, FeatureComparisonTable } from "@/components/ui/ComparisonTable";
+import { InsightsPanel, KeyAdvantage } from "@/components/ui/InsightsPanel";
+import { Container, Section, ContentBox } from "@/components/ui/Container";
+import { Heading, Text, Paragraph } from "@/components/ui/Typography";
+import { Grid } from "@/components/ui/Grid";
+
+// Competitor data
+const competitors: CompetitorProfile[] = [
+  {
+    name: "Van Alen",
+    location: "615 S Buchanan Blvd, Durham, NC",
+    builtYear: "2021",
+    units: "418 units",
+    distance: "0.7 miles",
+    pricing: {
+      studio: "$1,895-2,250",
+      oneBr: "$2,295-2,695",
+      twoBr: "$2,995-3,850",
+    },
+    performance: {
+      occupancy: "93%",
+      concessions: "1.5 months free",
+    },
+    residentProfile: {
+      medianAge: "32",
+      income: "$105K-135K",
+      workFromHome: "45%",
+      demographics: "58% single professionals",
+    },
+    strengths: [
+      "Urban sanctuary concept with sophisticated design and private courtyards",
+      "Excellent proximity to Duke University and Medical Center",
+      "Strong sustainability focus with LEED certification and wellness amenities",
+    ],
+    weaknesses: [
+      "No true high-rise views despite premium positioning",
+      "Limited technology integration in units and amenity spaces",
+      "Inconsistent staff service and response times (38% of negative reviews)",
+    ],
+    recommendations: [
+      "Position The Novus's high-rise format as offering truly premium views unavailable at Van Alen",
+      "Emphasize The Novus's superior technology integration and smart home features",
+      "Develop a high-touch service model with quick response guarantees and feedback tracking",
+    ],
+    isPrimary: true,
+    ranking: 1,
+  },
+  {
+    name: "One City Center",
+    location: "110 Corcoran St, Durham, NC",
+    builtYear: "2018",
+    units: "139 units",
+    distance: "0.3 miles",
+    pricing: {
+      studio: "$2,195-2,595",
+      oneBr: "$2,550-3,050",
+      twoBr: "$3,395-4,850",
+    },
+    performance: {
+      occupancy: "95%",
+      concessions: "1 month free",
+    },
+    residentProfile: {
+      medianAge: "39",
+      income: "$125K-175K",
+      workFromHome: "40%",
+      demographics: "45% couples, 55% singles",
+    },
+    strengths: [
+      "High-rise format with excellent city views and rooftop pool and lounge",
+      "Prime central location with walkability to shops, restaurants, and DPAC",
+      "Mixed-use building with ground floor retail and premium resident services",
+    ],
+    weaknesses: [
+      "Significantly shorter building height (22 stories) with fewer premium view units",
+      "Limited technology integration in units and outdated resident app",
+      "Expensive parking with limited visitor options and difficult weekend access",
+    ],
+    recommendations: [
+      "Emphasize The Novus's superior height (27 vs. 22 stories) offering more premium view units",
+      "Highlight advanced technology integration in units with comprehensive smart home features",
+      "Develop superior parking solution with dedicated, accessible visitor parking and valet options",
+    ],
+    isPrimary: true,
+    ranking: 2,
+  },
+  {
+    name: "511 Faye",
+    location: "511 Fayetteville St, Durham, NC",
+    builtYear: "2023",
+    units: "196 units",
+    distance: "0.5 miles",
+    pricing: {
+      studio: "$1,795-2,150",
+      oneBr: "$2,195-2,550",
+      twoBr: "$2,850-3,450",
+    },
+    performance: {
+      occupancy: "87%",
+      concessions: "2 months free",
+    },
+    residentProfile: {
+      medianAge: "31",
+      income: "$95K-135K",
+      workFromHome: "50%",
+      demographics: "65% singles, 35% couples",
+    },
+    strengths: [
+      "High-rise format (15 stories) with modern design and downtown views",
+      "Newest property in competition set with modern finishes and amenities",
+      "Excellent remote work amenities with private pods and conference spaces",
+    ],
+    weaknesses: [
+      "Low occupancy with aggressive concessions despite recent completion",
+      "Inconsistent resident services with no true concierge model",
+      "Limited outdoor amenity spaces with small pool deck and gathering areas",
+    ],
+    recommendations: [
+      "Position The Novus's significantly taller format (27 vs. 15 stories) with superior views",
+      "Develop premium concierge service model with dedicated staff and service guarantees",
+      "Create larger, more diverse outdoor amenity spaces with multiple activity zones",
+    ],
+    isPrimary: true,
+    ranking: 3,
+  },
+  {
+    name: "Cortland Bull City",
+    location: "125 W Main St, Durham, NC",
+    builtYear: "2019",
+    units: "305 units",
+    distance: "0.8 miles",
+    pricing: {
+      studio: "$1,750-2,050",
+      oneBr: "$1,995-2,350",
+      twoBr: "$2,450-2,950",
+    },
+    performance: {
+      occupancy: "91%",
+      concessions: "1 month free",
+    },
+    residentProfile: {
+      medianAge: "34",
+      income: "$90K-120K",
+      workFromHome: "42%",
+      demographics: "60% singles, 35% couples",
+    },
+    strengths: [
+      "Modern tech integration with smart home features in all units",
+      "Excellent co-working spaces with private conference rooms",
+      "Design-forward interiors with custom finishes and lighting",
+    ],
+    weaknesses: [
+      "Limited amenity variety compared to newer properties",
+      "Limited outdoor amenity spaces with undersized pool area",
+      "Resident complaints about management responsiveness",
+    ],
+    recommendations: [
+      "Match or exceed technology offerings while emphasizing superior service model",
+      "Develop significantly larger outdoor amenity spaces with multiple activity zones",
+      "Position in similar design-forward aesthetic with enhanced emphasis on quality",
+    ],
+    isPrimary: true,
+    ranking: 4,
+  },
+  {
+    name: "Berkshire Ninth Street",
+    location: "510 N Mangum St, Durham, NC",
+    builtYear: "2015",
+    units: "303 units",
+    distance: "1.4 miles",
+    pricing: {
+      studio: "$1,875-2,095",
+      oneBr: "$2,195-2,450",
+      twoBr: "$2,695-3,250",
+    },
+    performance: {
+      occupancy: "94%",
+      concessions: "1.5 months free",
+    },
+    isPrimary: false,
+    ranking: 5,
+  },
+  {
+    name: "Beckon Apartments",
+    location: "220 W Durham Blvd, Durham, NC",
+    builtYear: "2022", 
+    units: "176 units",
+    distance: "1.1 miles",
+    pricing: {
+      studio: "$1,795-2,025",
+      oneBr: "$2,095-2,425",
+      twoBr: "$2,650-3,250",
+    },
+    performance: {
+      occupancy: "89%",
+      concessions: "1.5 months free",
+    },
+    isPrimary: false,
+    ranking: 6,
+  },
+];
+
+// Matrix data
+const properties = [
+  { name: "The Novus", year: "2025", units: "188", highlight: true },
+  { name: "Van Alen", year: "2021", units: "418" },
+  { name: "One City Center", year: "2018", units: "139" },
+  { name: "511 Faye", year: "2023", units: "196" },
+  { name: "Cortland Bull City", year: "2019", units: "305" },
+  { name: "Berkshire Ninth Street", year: "2015", units: "303" },
+];
+
+const matrixMetrics = [
+  {
+    name: "Avg. Rent",
+    values: {
+      "The Novus": { value: "$3,150", highlight: true },
+      "Van Alen": { value: "$2,450" },
+      "One City Center": { value: "$2,695" },
+      "511 Faye": { value: "$2,350" },
+      "Cortland Bull City": { value: "$2,150" },
+      "Berkshire Ninth Street": { value: "$1,995" }
+    }
+  },
+  {
+    name: "Occupancy",
+    values: {
+      "The Novus": { value: "Lease-up", highlight: true },
+      "Van Alen": { value: "93%" },
+      "One City Center": { value: "95%" },
+      "511 Faye": { value: "87%" },
+      "Cortland Bull City": { value: "91%" },
+      "Berkshire Ninth Street": { value: "94%" }
+    }
+  },
+  {
+    name: "Concessions",
+    values: {
+      "The Novus": { value: "1.5-2 months", highlight: true },
+      "Van Alen": { value: "1.5 months free" },
+      "One City Center": { value: "1 month free" },
+      "511 Faye": { value: "2 months free" },
+      "Cortland Bull City": { value: "1 month free" },
+      "Berkshire Ninth Street": { value: "1.5 months free" }
+    }
+  },
+  {
+    name: "Amenity Rating",
+    values: {
+      "The Novus": { value: "★★★★★", highlight: true, rating: 5 },
+      "Van Alen": { value: "★★★★☆", rating: 4 },
+      "One City Center": { value: "★★★★★", rating: 5 },
+      "511 Faye": { value: "★★★★☆", rating: 4 },
+      "Cortland Bull City": { value: "★★★★☆", rating: 4 },
+      "Berkshire Ninth Street": { value: "★★★☆☆", rating: 3 }
+    }
+  }
+];
+
+// Feature comparison data
+const featureComparisonProperties = ["The Novus", "Van Alen", "One City Center", "Cortland Bull City", "Foster on the Park"];
+
+const featureComparisonData = [
+  {
+    name: "Building Height",
+    values: {
+      "The Novus": { value: "27 stories", highlight: true },
+      "Van Alen": "6 stories",
+      "One City Center": "22 stories",
+      "Cortland Bull City": "5 stories",
+      "Foster on the Park": "7 stories"
+    }
+  },
+  {
+    name: "Pool",
+    category: "Amenities",
+    values: {
+      "The Novus": { value: "✓ Rooftop infinity pool with city views", highlight: true },
+      "Van Alen": "✓ Saltwater pool",
+      "One City Center": "✓ Rooftop pool",
+      "Cortland Bull City": "✓ Resort-style pool",
+      "Foster on the Park": "✓ Courtyard pool"
+    }
+  },
+  {
+    name: "Fitness Center",
+    category: "Amenities",
+    values: {
+      "The Novus": { value: "✓ 3,500 sq ft center with Peloton bikes & yoga studio", highlight: true },
+      "Van Alen": "✓ Standard fitness center",
+      "One City Center": "✓ Premium fitness center",
+      "Cortland Bull City": "✓ 24-hour fitness center",
+      "Foster on the Park": "✓ Basic gym equipment"
+    }
+  },
+  {
+    name: "Pet Amenities",
+    category: "Amenities",
+    values: {
+      "The Novus": { value: "✓ Dog park, wash station, 24/7 walking service", highlight: true },
+      "Van Alen": "✓ Dog wash only",
+      "One City Center": "✓ Pet spa & walking area",
+      "Cortland Bull City": "✓ Dog park & wash station",
+      "Foster on the Park": "✓ Pet relief area"
+    }
+  },
+  {
+    name: "Unit Finishes",
+    category: "Interior Features",
+    values: {
+      "The Novus": { 
+        value: "• Quartz countertops\n• Italian tile backsplashes\n• High-end appliance package\n• Engineered hardwood floors", 
+        highlight: true 
+      },
+      "Van Alen": "• Quartz countertops\n• Ceramic tile backsplashes\n• Stainless appliances\n• Vinyl plank flooring",
+      "One City Center": "• Granite countertops\n• Tile backsplashes\n• High-end appliances\n• Hardwood floors",
+      "Cortland Bull City": "• Quartz countertops\n• Subway tile backsplashes\n• Stainless appliances\n• Vinyl plank flooring",
+      "Foster on the Park": "• Granite countertops\n• Ceramic tile backsplashes\n• Standard appliances\n• Carpet/vinyl flooring"
+    }
+  },
+  {
+    name: "Monthly Price Range (1BR)",
+    category: "Pricing",
+    values: {
+      "The Novus": { value: "$2,795-3,450", highlight: true },
+      "Van Alen": "$2,295-2,695",
+      "One City Center": "$2,550-3,050",
+      "Cortland Bull City": "$1,995-2,350",
+      "Foster on the Park": "$2,195-2,450"
+    }
+  },
+  {
+    name: "Leasing Incentives",
+    category: "Pricing",
+    values: {
+      "The Novus": { 
+        value: "• 2 months free on 14+ month leases\n• $1,500 move-in credit\n• Waived admin & app fees\n• Free reserved parking (1st year)", 
+        highlight: true 
+      },
+      "Van Alen": "• 1.5 months free\n• $750 move-in credit\n• Reduced admin fee",
+      "One City Center": "• 1 month free\n• Waived application fee\n• Reduced parking rate",
+      "Cortland Bull City": "• 1 month free\n• $500 gift card\n• Waived admin fee",
+      "Foster on the Park": "• 6 weeks free\n• $250 gift card\n• Reduced security deposit"
+    }
+  }
+];
+
+// Insights data
+const matrixInsights = [
+  {
+    text: "The Downtown Durham submarket shows solid occupancy rates (91-95%) despite recent rent moderation and new inventory.",
+    highlight: true,
+    category: "insight"
+  },
+  {
+    text: "Concession trends show most properties offering 1-2 months free, with newer properties providing higher incentives to drive lease-up velocity.",
+    category: "insight"
+  },
+  {
+    text: "The Novus's target rents position the property at a premium in the market, justified by its unique high-rise format, unmatched views, and superior amenities.",
+    highlight: true,
+    category: "strength"
+  },
+  {
+    text: "Only One City Center offers a comparable high-rise living experience, indicating opportunity for The Novus to establish distinctive positioning through its taller format (27 stories), enhanced technology, and premium services.",
+    category: "opportunity"
+  }
+];
+
+// Key advantages data
+const keyAdvantages = [
+  {
+    title: "Unmatched High-Rise Format",
+    description: "Leveraging The Novus's 27-story height to provide truly premium views unavailable at competitors",
+    icon: <Building className="h-5 w-5 text-novus-gold" />
+  },
+  {
+    title: "Enhanced Remote Work Spaces",
+    description: "Capitalizing on the 40-50% of residents working from home at competitive properties",
+    icon: <Users className="h-5 w-5 text-[#CAB06B]" />
+  },
+  {
+    title: "Smart Home Technology",
+    description: "Integrating advanced automation and connectivity lacking in competitor offerings",
+    icon: <Zap className="h-5 w-5 text-[#CAB06B]" />
+  },
+  {
+    title: "Premium Service Model",
+    description: "Establishing a high-touch concierge approach with service guarantees and tracking",
+    icon: <Award className="h-5 w-5 text-[#CAB06B]" />
+  },
+  {
+    title: "Vertical Neighborhood Concept",
+    description: "Creating a unique mixed-use environment with ground floor retail and stratified amenities",
+    icon: <Target className="h-5 w-5 text-[#CAB06B]" />
+  }
+];
+
+export default function CompetitiveLandscape() {
+  return (
+    <>
+      <Head>
+        <title>Competitive Landscape Analysis | The Novus</title>
+        <meta name="description" content="Competitive Landscape Analysis for The Novus Apartments Lease-Up Strategy" />
+      </Head>
+      
+      <Layout>
+        <Container size="wide">
+          <Section>
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6 }}
+            >
+              <Heading level={1}>Competitive Landscape Analysis</Heading>
+              
+              <ContentBox variant="highlight-accent" className="mt-6">
+                <Text variant="body-lg" color="primary" wrap="pretty">
+                  The Novus will enter a market with 6 primary competitors in Downtown Durham. This analysis identifies key differentiators, competitive gaps, and strategic positioning opportunities for The Novus's distinctive high-rise offering.
+                </Text>
+              </ContentBox>
+            </motion.div>
+          </Section>
+          
+          <Section 
+            title="Competitive Set Overview"
+            subtitle="An analysis of the primary and secondary competitors in the Downtown Durham market."
+            icon={<Building className="h-6 w-6" />}
+            animate={true}
+            withDivider
+          >
+            <Grid columns={2} gap="lg" className="mb-8">
+              {/* Primary Competitors Section */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: 0.1 }}
+              >
+                <ContentBox variant="light">
+                  <div className="flex items-center gap-3 mb-4">
+                    <Building className="text-novus-gold" size={24} />
+                    <Heading level={3} className="mb-0 uppercase tracking-wide">Primary Competitors</Heading>
+                  </div>
+                  
+                  <div className="space-y-2">
+                    {competitors
+                      .filter(comp => comp.isPrimary)
+                      .map((competitor, idx) => (
+                        <CompetitorCard 
+                          key={idx} 
+                          competitor={competitor} 
+                          variant="compact"
+                          animate={true}
+                        />
+                      ))
+                    }
+                  </div>
+                </ContentBox>
+              </motion.div>
+              
+              {/* Secondary Competitors Section */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: 0.2 }}
+              >
+                <ContentBox variant="light">
+                  <div className="flex items-center gap-3 mb-4">
+                    <Users className="text-novus-gold" size={24} />
+                    <Heading level={3} className="mb-0 uppercase tracking-wide">Secondary Competitors</Heading>
+                  </div>
+                  
+                  <div className="space-y-2">
+                    {competitors
+                      .filter(comp => !comp.isPrimary)
+                      .map((competitor, idx) => (
+                        <CompetitorCard 
+                          key={idx} 
+                          competitor={competitor} 
+                          variant="compact"
+                          animate={true}
+                        />
+                      ))
+                    }
+                  </div>
+                </ContentBox>
+              </motion.div>
+            </Grid>
+            
+            {/* Competitor Matrix Analysis Section */}
+            <div className="mt-12">
+              <MatrixComparisonTable
+                title="Competitive Matrix Analysis"
+                description="This comparative matrix highlights key metrics across the competitive set, revealing strategic positioning opportunities for The Novus based on amenities, rents, absorption rates, and resident demographics."
+                properties={properties}
+                metrics={matrixMetrics}
+                className="mb-8"
+              />
+              
+              <InsightsPanel
+                title="Key Matrix Insights"
+                insights={matrixInsights}
+                icon={<BarChart className="h-5 w-5 text-[#CAB06B]" />}
+                variant="highlight"
+                className="mb-12"
+              />
+            </div>
+            
+            {/* Property Comparison Table */}
+            <div className="mt-12">
+              <FeatureComparisonTable
+                title="Detailed Property Comparison"
+                description="The following side-by-side comparison highlights key differentiators between The Novus and its primary competitors, focusing on building attributes, amenities, finishes, and leasing incentives."
+                properties={featureComparisonProperties}
+                features={featureComparisonData}
+                highlightProperty="The Novus"
+                className="mb-12"
+              />
+            </div>
+          </Section>
+          
+          <Section
+            title="Detailed Competitor Analyses"
+            subtitle="Property-specific insights for the primary competitors in The Novus's competitive set, with recommendations for strategic positioning and competitive response."
+            icon={<TrendingUp className="h-6 w-6" />}
+            divider={true}
+            animate={true}
+          >
+            <div className="space-y-8">
+              {competitors
+                .filter(comp => comp.isPrimary && comp.strengths && comp.weaknesses && comp.recommendations)
+                .map((competitor, idx) => (
+                  <CompetitorCard 
+                    key={idx} 
+                    competitor={competitor} 
+                    variant="detailed"
+                    animate={true}
+                  />
+                ))
+              }
+            </div>
+          </Section>
+          
+          <Section
+            title="Competitive Landscape Summary"
+            subtitle="Our competitive analysis reveals significant opportunity for The Novus to establish a unique market position."
+            icon={<Award className="h-6 w-6" />}
+            divider={true}
+            animate={true}
+            color="light"
+          >
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+              {keyAdvantages.map((advantage, idx) => (
+                <KeyAdvantage
+                  key={idx}
+                  title={advantage.title}
+                  description={advantage.description}
+                  icon={advantage.icon}
+                />
+              ))}
+            </div>
+            
+            <motion.div
+              className="bg-accent-light p-6 border border-novus-border rounded-md"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5 }}
+            >
+              <Paragraph color="secondary" wrap="pretty">
+                By implementing these strategic differentiators, The Novus can command the premium position in the Durham market while achieving accelerated lease-up velocity relative to comparable new deliveries.
+              </Paragraph>
+            </motion.div>
+          </Section>
+        </Container>
+      </Layout>
+    </>
+  );
+}

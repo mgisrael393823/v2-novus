@@ -1,0 +1,66 @@
+/* 
+  Grid System Framework for The Novus Apartments Website
+  A comprehensive 12-column grid system with responsive breakpoints
+*/
+
+:root {
+  /* Spacing scale */
+  --space-xs: 8px;
+  --space-sm: 16px;
+  --space-md: 24px;
+  --space-lg: 32px;
+  --space-xl: 48px;
+
+  /* Grid variables */
+  --container-padding: var(--space-md);
+  --grid-columns: 12;
+  --grid-gap: var(--space-md);
+  
+  /* Breakpoints - as media query conditions */
+  --mobile: 479px;
+  --tablet: 768px;
+  --desktop: 1024px;
+  --wide: 1280px;
+  
+  /* Container widths */
+  --container-width-sm: 100%;
+  --container-width-md: 90%;
+  --container-width-lg: 1080px;
+  --container-width-xl: 1280px;
+  
+  /* Max widths by container size */
+  --container-max-narrow: 768px;
+  --container-max-default: 1080px;
+  --container-max-wide: 1280px;
+}
+
+/* Base container */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(var(--grid-columns), 1fr);
+  gap: var(--grid-gap);
+  width: 100%;
+  max-width: var(--container-max-default);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--container-padding);
+  padding-right: var(--container-padding);
+}
+
+.grid-container-narrow {
+  max-width: var(--container-max-narrow);
+}
+
+.grid-container-wide {
+  max-width: var(--container-max-wide);
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  :root {
+    --grid-gap: var(--space-sm);
+    --container-padding: var(--space-sm);
+  }
+  
+  .grid-container {
+    max
