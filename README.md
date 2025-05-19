@@ -1,7 +1,9 @@
-# The Novus Apartments - Lease-Up Strategy Blueprint
+# The Novus Apartments - Lease-Up Strategy Blueprint (V2)
 
 ## Project Overview
-This project is a Next.js application that serves as a blueprint for The Novus Apartments lease-up strategy, presenting comprehensive market analysis, competitive positioning, and strategic recommendations tailored for the Downtown Durham/Five Points District multifamily market. The website showcases premium content through a strategic gating approach to entice potential consulting clients.
+This project is the second version of a Next.js application that serves as a blueprint for The Novus Apartments lease-up strategy, presenting comprehensive market analysis, competitive positioning, and strategic recommendations tailored for the Downtown Durham/Five Points District multifamily market. The website showcases premium content through a strategic gating approach to entice potential consulting clients.
+
+> **Note**: This is a fork of the original [novus-apartments-website](https://github.com/mgisrael393823/novus-apartments-website) project. Changes made to this repository will not affect the original codebase.
 
 ## Migration Strategy Status
 This project was migrated from the original Sol Phoenix template. Below is the current status and remaining tasks for complete migration:
@@ -86,7 +88,7 @@ This project was migrated from the original Sol Phoenix template. Below is the c
 
 ### Step 1: Content Replacement Pattern
 For each page, follow this exact pattern:
-1. First, read the existing page from `/Users/michaelisrael/novus-apartments-website/src/pages/[page-name].tsx`
+1. First, read the existing page from `/Users/michaelisrael/v2-novus/src/pages/[page-name].tsx`
 2. For each section, precisely replace Phoenix/Sol content with Durham/Novus content
 3. Update all color references from coral (`#E57161`) to gold (`#CAB06B`)
 4. Update background colors from `#FCFAF5` to `#F9F8F4`
@@ -165,7 +167,7 @@ Access the site at http://localhost:3000 (or whichever port is configured).
 
 ## File Structure Reference
 ```
-/Users/michaelisrael/novus-apartments-website/
+/Users/michaelisrael/v2-novus/
 ├── src/
 │   ├── components/       # UI components
 │   │   ├── GatedContent/ # Content gating components
