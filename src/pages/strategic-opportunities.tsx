@@ -4,6 +4,8 @@ import Layout from "@/components/Layout/Layout";
 import { GatedContent } from "@/components/deprecated/GatedContent";
 import { Heading } from "@/components/ui/Heading";
 import { HighlightBox } from "@/components/ui/HighlightBox";
+import { PageContainer, Section } from "@/components/ui/Container";
+import { Paragraph } from "@/components/ui/Typography";
 
 export default function StrategicOpportunities() {
   return (
@@ -14,28 +16,17 @@ export default function StrategicOpportunities() {
       </Head>
       
       <Layout>
-        <div className="max-w-4xl mx-auto">
-          <div className="mb-12">
-            <Heading level={1} className="text-3xl md:text-4xl font-bold mb-2">Strategic Opportunities</Heading>
-            <div className="w-24 h-1 bg-[#CAB06B] mb-6"></div>
-            
-            <p className="text-lg text-[#4A5568] mb-8">
-              Based on our comprehensive competitive analysis of the Downtown Durham/Five Points District multifamily market, we've identified key strategic opportunities for The Novus to differentiate itself through its unique 27-story high-rise format and maximize its competitive position.
-            </p>
-            
-            <div className="bg-[#F9F7F2] p-6 mb-8">
-              <h3 className="text-xl font-bold text-[#2C5282] mb-4 flex items-center">
-                <span className="w-3 h-3 rounded-full bg-[#CAB06B] mr-3"></span>
-                Executive Summary
-              </h3>
-              <p className="text-[15px] text-[#4A5568] leading-relaxed">
-                The Novus has identified 5 key strategic opportunities in the Durham market, focusing on premium high-rise positioning, stratified amenity experiences, superior sound isolation, specialized offerings for Duke University affiliates, and cutting-edge technology solutions that address gaps in existing competitor offerings. These opportunities will be implemented in three phases to maximize market differentiation and leasing velocity.
-              </p>
-            </div>
-          </div>
-          
-          <section className="my-10">
-            <Heading level={2} className="mb-6">Target Demographics and Local Partnerships</Heading>
+        <PageContainer
+          title="Strategic Opportunities"
+          intro="Based on our comprehensive competitive analysis of the Downtown Durham/Five Points District multifamily market, we've identified key strategic opportunities for The Novus to differentiate itself through its unique 27-story high-rise format and maximize its competitive position."
+        >
+          <HighlightBox variant="accent" title="Executive Summary" className="mb-12">
+            <Paragraph>
+              The Novus has identified 5 key strategic opportunities in the Durham market, focusing on premium high-rise positioning, stratified amenity experiences, superior sound isolation, specialized offerings for Duke University affiliates, and cutting-edge technology solutions that address gaps in existing competitor offerings. These opportunities will be implemented in three phases to maximize market differentiation and leasing velocity.
+            </Paragraph>
+          </HighlightBox>
+
+          <Section title="Target Demographics and Local Partnerships">
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
               {/* Card Container: Demographics */}
@@ -215,14 +206,14 @@ export default function StrategicOpportunities() {
                 The Novus will implement a targeted outreach program for each demographic segment, with customized marketing materials and dedicated leasing specialists for each vertical. Partnership opportunities will be pursued through executive-level engagement with key decision-makers at target organizations, with formal agreements to be established 3-6 months prior to opening.
               </p>
             </div>
-          </section>
+          </Section>
           
           <GatedContent 
             title="Strategic Opportunities" 
             teaser="Our detailed analysis has identified multiple opportunities for competitive advantage in the Durham market, addressing gaps in current offerings and leveraging The Novus's distinctive vertical neighborhood concept. These opportunities span premium view units, amenity stratification across 27 floors, resident experience tailored to Durham professionals, and marketing positioning as Downtown Durham's premier high-rise residential tower."
           >
             <div className="space-y-12">
-              <section className="mb-12">
+              <Section className="mb-12" size="sm">
                 {/* Enhanced Section Title Container */}
                 <div className="bg-[#F9F7F2] rounded-md shadow-sm border-l-4 border-[#CAB06B] px-6 py-6 mb-12">
                   <div className="flex items-center mb-2">
@@ -478,9 +469,9 @@ export default function StrategicOpportunities() {
                     </div>
                   </div>
                 </div>
-              </section>
-              
-              <section className="mb-12">
+              </Section>
+
+              <Section className="mb-12" size="sm">
                 {/* Enhanced Section Title Container */}
                 <div className="bg-[#F2F7FC] rounded-md shadow-sm border-l-4 border-[#2C5282] px-6 py-6 mb-12">
                   <div className="flex items-center mb-2">
@@ -655,9 +646,9 @@ export default function StrategicOpportunities() {
                     </div>
                   </div>
                 </div>
-              </section>
-              
-              <section className="mb-12">
+              </Section>
+
+              <Section className="mb-12" size="sm">
                 {/* Section Header - Matching other section headers */}
                 <div className="bg-[#F9F7F2] rounded-md shadow-sm border-l-4 border-[#CAB06B] px-6 py-6 mb-12">
                   <div className="flex items-center mb-2">
@@ -954,7 +945,7 @@ export default function StrategicOpportunities() {
                     </p>
                   </div>
                 </div>
-              </section>
+              </Section>
               
               <HighlightBox variant="secondary">
                 <p className="text-sm">
@@ -963,7 +954,7 @@ export default function StrategicOpportunities() {
               </HighlightBox>
             </div>
           </GatedContent>
-        </div>
+        </PageContainer>
       </Layout>
     </>
   );
