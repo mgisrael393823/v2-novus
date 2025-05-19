@@ -3,17 +3,12 @@ import { motion } from 'framer-motion';
 import { TrendingUp, TrendingDown, Minus } from 'lucide-react';
 
 // Define types for our data
-export interface DataTableColumn {
-  key: string;
+export interface DataTableColumn<T> {
+  key: keyof T;
   header: string;
   align?: 'left' | 'center' | 'right';
-  format?: (value: any) => React.ReactNode;
+  format?: (value: T[keyof T]) => React.ReactNode;
   highlight?: boolean;
-}
-
-export interface DataTableRow {
-  id: string | number;
-  [key: string]: any;
 }
 
 export interface ComparisonDataItem {
@@ -24,9 +19,9 @@ export interface ComparisonDataItem {
   isPositive?: boolean;
 }
 
-interface DataTableProps {
-  columns: DataTableColumn[];
-  data: DataTableRow[];
+interface DataTableProps<T extends { id: string | number }> {
+  columns: DataTableColumn<T>[];
+  data: T[];
   title?: string;
   caption?: string;
   className?: string;
@@ -45,7 +40,7 @@ interface ComparisonTableProps {
   className?: string;
 }
 
-export function DataTable({
+export function DataTable<T extends { id: string | number }>({
   columns,
   data,
   title,
@@ -55,7 +50,7 @@ export function DataTable({
   bordered = true,
   compact = false,
   hoverEffect = true,
-}: DataTableProps) {
+}: DataTableProps<T>) {
   const cellPadding = compact ? 'px-2 py-1' : 'px-4 py-3';
   const fontSize = compact ? 'text-xs' : 'text-sm';
   
