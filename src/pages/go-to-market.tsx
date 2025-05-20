@@ -24,36 +24,38 @@ export default function GoToMarket() {
           
           {/* New Timeline Section */}
           <section className="my-10">
-            <div className="bg-[#F9F8F4] border border-[#E5E2D9] rounded-md p-6 mb-8">
-              <h2 className="text-2xl font-semibold text-[#333333] text-center mb-2">Lease-Up Strategy Timeline</h2>
-              <p className="text-[#666666] text-center mb-8">A comprehensive roadmap to reaching stabilized occupancy</p>
+            <div className="bg-novus-cream border border-novus-border rounded-md p-6 mb-8">
+              <h2 className="text-2xl font-semibold text-text-primary text-center mb-2">Lease-Up Strategy Timeline</h2>
+              <p className="text-text-secondary text-center mb-8">A comprehensive roadmap to reaching stabilized occupancy</p>
               
               {/* Timeline Visual */}
               <div className="relative">
                 {/* Timeline line */}
-                <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-[#CAB06B] rounded-full"></div>
+                <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-novus-gold rounded-full"></div>
                 
                 {/* Timeline points */}
                 <div className="relative z-10">
                   {/* Pre-Leasing Launch */}
-                  <div className="flex flex-col md:flex-row items-center mb-16 relative">
-                    <div className="md:w-1/2 md:pr-10 text-right order-2 md:order-1">
-                      <h3 className="text-xl font-semibold text-[#333333] mb-2">Pre-Leasing Launch</h3>
-                      <p className="text-[#666666] font-bold mb-2">July 2025</p>
-                      <ul className="text-[#666666] text-sm space-y-1">
+                  <div className="flex flex-col md:grid md:grid-cols-[1fr_auto_1fr] items-center mb-16 gap-8">
+                    <div className="md:text-right md:pr-10 order-2 md:order-1">
+                      <h3 className="text-xl font-semibold text-text-primary mb-2">Pre-Leasing Launch</h3>
+                      <p className="text-text-secondary font-bold mb-2">July 2025</p>
+                      <ul className="text-text-secondary text-sm space-y-1">
                         <li>• Website launch with virtual tours & reservations</li>
                         <li>• Leasing gallery opening with material samples</li>
                         <li>• VIP preview events for priority list members</li>
                         <li>• Begin accepting refundable deposits</li>
                       </ul>
                     </div>
-                    <div className="absolute left-1/2 transform -translate-x-1/2 w-10 h-10 rounded-full bg-[#F9F8F4] border-4 border-[#CAB06B] flex items-center justify-center">
-                      <span className="font-bold text-[#CAB06B]">1</span>
+                    <div className="flex justify-center">
+                      <div className="w-10 h-10 rounded-full bg-novus-cream border-4 border-novus-gold flex items-center justify-center">
+                        <span className="font-bold text-novus-gold">1</span>
+                      </div>
                     </div>
-                    <div className="md:w-1/2 md:pl-10 md:mt-0 mt-4 order-1 md:order-2">
-                      <div className="bg-white border border-[#E5E2D9] p-4 rounded-md shadow-sm">
-                        <h4 className="font-semibold text-[#333333] mb-2">Digital Marketing Focus</h4>
-                        <ul className="text-sm text-[#666666] space-y-1">
+                    <div className="md:pl-10 md:mt-0 mt-4 order-1 md:order-2">
+                      <div className="bg-white border border-novus-border p-4 rounded-md shadow-sm">
+                        <h4 className="font-semibold text-text-primary mb-2">Digital Marketing Focus</h4>
+                        <ul className="text-sm text-text-secondary space-y-1">
                           <li>• Geo-targeted social ads in Durham area</li>
                           <li>• Local influencer partnerships</li>
                           <li>• Duke University targeted outreach</li>
@@ -64,11 +66,11 @@ export default function GoToMarket() {
                   </div>
                   
                   {/* Initial Leasing Goal */}
-                  <div className="flex flex-col md:flex-row items-center mb-16 relative">
-                    <div className="md:w-1/2 md:pr-10 text-right order-2 md:order-1">
-                      <div className="bg-white border border-[#E5E2D9] p-4 rounded-md shadow-sm">
-                        <h4 className="font-semibold text-[#333333] mb-2">Marketing Initiatives</h4>
-                        <ul className="text-sm text-[#666666] space-y-1">
+                  <div className="flex flex-col md:grid md:grid-cols-[1fr_auto_1fr] items-center mb-16 gap-8">
+                    <div className="md:text-right md:pr-10 order-2 md:order-1">
+                      <div className="bg-white border border-novus-border p-4 rounded-md shadow-sm">
+                        <h4 className="font-semibold text-text-primary mb-2">Marketing Initiatives</h4>
+                        <ul className="text-sm text-text-secondary space-y-1">
                           <li>• Grand opening gala event</li>
                           <li>• Local event sponsorships</li>
                           <li>• Open house tours with refreshments</li>
@@ -76,13 +78,15 @@ export default function GoToMarket() {
                         </ul>
                       </div>
                     </div>
-                    <div className="absolute left-1/2 transform -translate-x-1/2 w-10 h-10 rounded-full bg-[#F9F8F4] border-4 border-[#CAB06B] flex items-center justify-center">
-                      <span className="font-bold text-[#CAB06B]">2</span>
+                    <div className="flex justify-center">
+                      <div className="w-10 h-10 rounded-full bg-novus-cream border-4 border-novus-gold flex items-center justify-center">
+                        <span className="font-bold text-novus-gold">2</span>
+                      </div>
                     </div>
-                    <div className="md:w-1/2 md:pl-10 md:mt-0 mt-4 order-1 md:order-2">
-                      <h3 className="text-xl font-semibold text-[#333333] mb-2">Initial Leasing Goal</h3>
-                      <p className="text-[#666666] font-bold mb-2">October 2025 (First 3 months)</p>
-                      <ul className="text-[#666666] text-sm space-y-1">
+                    <div className="md:pl-10 md:mt-0 mt-4 order-1 md:order-2">
+                      <h3 className="text-xl font-semibold text-text-primary mb-2">Initial Leasing Goal</h3>
+                      <p className="text-text-secondary font-bold mb-2">October 2025 (First 3 months)</p>
+                      <ul className="text-text-secondary text-sm space-y-1">
                         <li>• Target: 30% occupancy (56 units)</li>
                         <li>• Focus on premium view units (floors 20-27)</li>
                         <li>• Maintain 15-20 tours per week</li>
@@ -92,24 +96,26 @@ export default function GoToMarket() {
                   </div>
                   
                   {/* Secondary Leasing Phase */}
-                  <div className="flex flex-col md:flex-row items-center mb-16 relative">
-                    <div className="md:w-1/2 md:pr-10 text-right order-2 md:order-1">
-                      <h3 className="text-xl font-semibold text-[#333333] mb-2">Secondary Leasing Phase</h3>
-                      <p className="text-[#666666] font-bold mb-2">November 2025 - January 2026</p>
-                      <ul className="text-[#666666] text-sm space-y-1">
+                  <div className="flex flex-col md:grid md:grid-cols-[1fr_auto_1fr] items-center mb-16 gap-8">
+                    <div className="md:text-right md:pr-10 order-2 md:order-1">
+                      <h3 className="text-xl font-semibold text-text-primary mb-2">Secondary Leasing Phase</h3>
+                      <p className="text-text-secondary font-bold mb-2">November 2025 - January 2026</p>
+                      <ul className="text-text-secondary text-sm space-y-1">
                         <li>• Target: 60-75% occupancy (113-141 units)</li>
                         <li>• Begin shifting to mid-tier units (floors 11-19)</li>
                         <li>• Incentive adjustments based on velocity</li>
                         <li>• Weekly performance review & strategy adjustment</li>
                       </ul>
                     </div>
-                    <div className="absolute left-1/2 transform -translate-x-1/2 w-10 h-10 rounded-full bg-[#F9F8F4] border-4 border-[#CAB06B] flex items-center justify-center">
-                      <span className="font-bold text-[#CAB06B]">3</span>
+                    <div className="flex justify-center">
+                      <div className="w-10 h-10 rounded-full bg-novus-cream border-4 border-novus-gold flex items-center justify-center">
+                        <span className="font-bold text-novus-gold">3</span>
+                      </div>
                     </div>
-                    <div className="md:w-1/2 md:pl-10 md:mt-0 mt-4 order-1 md:order-2">
-                      <div className="bg-white border border-[#E5E2D9] p-4 rounded-md shadow-sm">
-                        <h4 className="font-semibold text-[#333333] mb-2">Marketing Initiatives</h4>
-                        <ul className="text-sm text-[#666666] space-y-1">
+                    <div className="md:pl-10 md:mt-0 mt-4 order-1 md:order-2">
+                      <div className="bg-white border border-novus-border p-4 rounded-md shadow-sm">
+                        <h4 className="font-semibold text-text-primary mb-2">Marketing Initiatives</h4>
+                        <ul className="text-sm text-text-secondary space-y-1">
                           <li>• Holiday-themed open house events</li>
                           <li>• Resident referral program launch</li>
                           <li>• Broker incentive program</li>
@@ -120,11 +126,11 @@ export default function GoToMarket() {
                   </div>
                   
                   {/* Stabilization Goal */}
-                  <div className="flex flex-col md:flex-row items-center relative">
-                    <div className="md:w-1/2 md:pr-10 text-right order-2 md:order-1">
-                      <div className="bg-white border border-[#E5E2D9] p-4 rounded-md shadow-sm">
-                        <h4 className="font-semibold text-[#333333] mb-2">Ongoing Marketing</h4>
-                        <ul className="text-sm text-[#666666] space-y-1">
+                  <div className="flex flex-col md:grid md:grid-cols-[1fr_auto_1fr] items-center relative gap-8">
+                    <div className="md:text-right md:pr-10 order-2 md:order-1">
+                      <div className="bg-white border border-novus-border p-4 rounded-md shadow-sm">
+                        <h4 className="font-semibold text-text-primary mb-2">Ongoing Marketing</h4>
+                        <ul className="text-sm text-text-secondary space-y-1">
                           <li>• SEO & content marketing</li>
                           <li>• Social media community building</li>
                           <li>• Resident retention programs</li>
@@ -133,13 +139,15 @@ export default function GoToMarket() {
                         </ul>
                       </div>
                     </div>
-                    <div className="absolute left-1/2 transform -translate-x-1/2 w-10 h-10 rounded-full bg-[#F9F8F4] border-4 border-[#CAB06B] flex items-center justify-center">
-                      <span className="font-bold text-[#CAB06B]">4</span>
+                    <div className="flex justify-center">
+                      <div className="w-10 h-10 rounded-full bg-novus-cream border-4 border-novus-gold flex items-center justify-center">
+                        <span className="font-bold text-novus-gold">4</span>
+                      </div>
                     </div>
-                    <div className="md:w-1/2 md:pl-10 md:mt-0 mt-4 order-1 md:order-2">
-                      <h3 className="text-xl font-semibold text-[#333333] mb-2">Stabilization Goal</h3>
-                      <p className="text-[#666666] font-bold mb-2">January 2027 (18 months total)</p>
-                      <ul className="text-[#666666] text-sm space-y-1">
+                    <div className="md:pl-10 md:mt-0 mt-4 order-1 md:order-2">
+                      <h3 className="text-xl font-semibold text-text-primary mb-2">Stabilization Goal</h3>
+                      <p className="text-text-secondary font-bold mb-2">January 2027 (18 months total)</p>
+                      <ul className="text-text-secondary text-sm space-y-1">
                         <li>• Target: 95% occupancy (178 units)</li>
                         <li>• Transition to standard pricing model</li>
                         <li>• Focus on retention and renewals</li>
@@ -154,53 +162,53 @@ export default function GoToMarket() {
             
             {/* Key Metrics Summary */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
-              <div className="bg-white border border-[#E5E2D9] rounded-md p-5 text-center">
-                <h3 className="text-sm uppercase tracking-wider text-[#666666] mb-2">Pre-Leasing Target</h3>
-                <p className="text-3xl font-bold text-[#CAB06B] mb-1">30-35%</p>
-                <p className="text-[#666666] text-sm">Reserved before opening</p>
+              <div className="bg-white border border-novus-border rounded-md p-5 text-center">
+                <h3 className="text-sm uppercase tracking-wider text-text-secondary mb-2">Pre-Leasing Target</h3>
+                <p className="text-3xl font-bold text-novus-gold mb-1">30-35%</p>
+                <p className="text-text-secondary text-sm">Reserved before opening</p>
               </div>
               
-              <div className="bg-white border border-[#E5E2D9] rounded-md p-5 text-center">
-                <h3 className="text-sm uppercase tracking-wider text-[#666666] mb-2">Monthly Absorption</h3>
-                <p className="text-3xl font-bold text-[#CAB06B] mb-1">10-15%</p>
-                <p className="text-[#666666] text-sm">During main lease-up</p>
+              <div className="bg-white border border-novus-border rounded-md p-5 text-center">
+                <h3 className="text-sm uppercase tracking-wider text-text-secondary mb-2">Monthly Absorption</h3>
+                <p className="text-3xl font-bold text-novus-gold mb-1">10-15%</p>
+                <p className="text-text-secondary text-sm">During main lease-up</p>
               </div>
               
-              <div className="bg-white border border-[#E5E2D9] rounded-md p-5 text-center">
-                <h3 className="text-sm uppercase tracking-wider text-[#666666] mb-2">Total Timeline</h3>
-                <p className="text-3xl font-bold text-[#CAB06B] mb-1">18 Months</p>
-                <p className="text-[#666666] text-sm">To stabilized occupancy</p>
+              <div className="bg-white border border-novus-border rounded-md p-5 text-center">
+                <h3 className="text-sm uppercase tracking-wider text-text-secondary mb-2">Total Timeline</h3>
+                <p className="text-3xl font-bold text-novus-gold mb-1">18 Months</p>
+                <p className="text-text-secondary text-sm">To stabilized occupancy</p>
               </div>
             </div>
             
             {/* Marketing Focus Timeline */}
-            <div className="bg-white border border-[#E5E2D9] rounded-md overflow-hidden mb-10">
-              <div className="bg-[#F9F8F4] px-6 py-4 border-b border-[#E5E2D9]">
-                <h3 className="text-xl font-semibold text-[#333333]">Marketing Initiatives Timeline</h3>
+            <div className="bg-white border border-novus-border rounded-md overflow-hidden mb-10">
+              <div className="bg-novus-cream px-6 py-4 border-b border-novus-border">
+                <h3 className="text-xl font-semibold text-text-primary">Marketing Initiatives Timeline</h3>
               </div>
               <div className="p-6">
                 <div className="space-y-6">
                   <div className="flex flex-col md:flex-row gap-4">
                     <div className="md:w-1/4">
-                      <h4 className="font-semibold text-[#333333] mb-1">Months 1-3</h4>
-                      <p className="text-sm text-[#666666]">July - Sept 2025</p>
+                      <h4 className="font-semibold text-text-primary mb-1">Months 1-3</h4>
+                      <p className="text-sm text-text-secondary">July - Sept 2025</p>
                     </div>
-                    <div className="md:w-3/4 bg-[#F9F8F4] p-4 rounded-md">
-                      <ul className="text-[#666666] space-y-2">
+                    <div className="md:w-3/4 bg-novus-cream p-4 rounded-md">
+                      <ul className="text-text-secondary space-y-2">
                         <li className="flex items-start">
-                          <span className="text-[#CAB06B] mr-2 font-bold">•</span>
+                          <span className="text-novus-gold mr-2 font-bold">•</span>
                           <span>Digital advertising campaign focused on Durham professionals</span>
                         </li>
                         <li className="flex items-start">
-                          <span className="text-[#CAB06B] mr-2 font-bold">•</span>
+                          <span className="text-novus-gold mr-2 font-bold">•</span>
                           <span>Instagram and TikTok influencer partnerships</span>
                         </li>
                         <li className="flex items-start">
-                          <span className="text-[#CAB06B] mr-2 font-bold">•</span>
+                          <span className="text-novus-gold mr-2 font-bold">•</span>
                           <span>Exclusive VIP preview events for priority list</span>
                         </li>
                         <li className="flex items-start">
-                          <span className="text-[#CAB06B] mr-2 font-bold">•</span>
+                          <span className="text-novus-gold mr-2 font-bold">•</span>
                           <span>Virtual reality tours of model units</span>
                         </li>
                       </ul>
@@ -209,25 +217,25 @@ export default function GoToMarket() {
                   
                   <div className="flex flex-col md:flex-row gap-4">
                     <div className="md:w-1/4">
-                      <h4 className="font-semibold text-[#333333] mb-1">Months 4-6</h4>
-                      <p className="text-sm text-[#666666]">Oct - Dec 2025</p>
+                      <h4 className="font-semibold text-text-primary mb-1">Months 4-6</h4>
+                      <p className="text-sm text-text-secondary">Oct - Dec 2025</p>
                     </div>
-                    <div className="md:w-3/4 bg-[#F9F8F4] p-4 rounded-md">
-                      <ul className="text-[#666666] space-y-2">
+                    <div className="md:w-3/4 bg-novus-cream p-4 rounded-md">
+                      <ul className="text-text-secondary space-y-2">
                         <li className="flex items-start">
-                          <span className="text-[#CAB06B] mr-2 font-bold">•</span>
+                          <span className="text-novus-gold mr-2 font-bold">•</span>
                           <span>Sponsorship of local Durham events and festivals</span>
                         </li>
                         <li className="flex items-start">
-                          <span className="text-[#CAB06B] mr-2 font-bold">•</span>
+                          <span className="text-novus-gold mr-2 font-bold">•</span>
                           <span>Weekly themed open house tours with local vendors</span>
                         </li>
                         <li className="flex items-start">
-                          <span className="text-[#CAB06B] mr-2 font-bold">•</span>
+                          <span className="text-novus-gold mr-2 font-bold">•</span>
                           <span>Duke University faculty & staff targeted outreach</span>
                         </li>
                         <li className="flex items-start">
-                          <span className="text-[#CAB06B] mr-2 font-bold">•</span>
+                          <span className="text-novus-gold mr-2 font-bold">•</span>
                           <span>Holiday-themed resident events to showcase community</span>
                         </li>
                       </ul>
@@ -236,29 +244,29 @@ export default function GoToMarket() {
                   
                   <div className="flex flex-col md:flex-row gap-4">
                     <div className="md:w-1/4">
-                      <h4 className="font-semibold text-[#333333] mb-1">Ongoing</h4>
-                      <p className="text-sm text-[#666666]">Throughout campaign</p>
+                      <h4 className="font-semibold text-text-primary mb-1">Ongoing</h4>
+                      <p className="text-sm text-text-secondary">Throughout campaign</p>
                     </div>
-                    <div className="md:w-3/4 bg-[#F9F8F4] p-4 rounded-md">
-                      <ul className="text-[#666666] space-y-2">
+                    <div className="md:w-3/4 bg-novus-cream p-4 rounded-md">
+                      <ul className="text-text-secondary space-y-2">
                         <li className="flex items-start">
-                          <span className="text-[#CAB06B] mr-2 font-bold">•</span>
+                          <span className="text-novus-gold mr-2 font-bold">•</span>
                           <span>SEO optimization and content marketing for organic traffic</span>
                         </li>
                         <li className="flex items-start">
-                          <span className="text-[#CAB06B] mr-2 font-bold">•</span>
+                          <span className="text-novus-gold mr-2 font-bold">•</span>
                           <span>Regular social media engagement including resident features</span>
                         </li>
                         <li className="flex items-start">
-                          <span className="text-[#CAB06B] mr-2 font-bold">•</span>
+                          <span className="text-novus-gold mr-2 font-bold">•</span>
                           <span>Retargeting ads to re-engage website visitors</span>
                         </li>
                         <li className="flex items-start">
-                          <span className="text-[#CAB06B] mr-2 font-bold">•</span>
+                          <span className="text-novus-gold mr-2 font-bold">•</span>
                           <span>Email nurture campaigns to prospects and leads</span>
                         </li>
                         <li className="flex items-start">
-                          <span className="text-[#CAB06B] mr-2 font-bold">•</span>
+                          <span className="text-novus-gold mr-2 font-bold">•</span>
                           <span>Community partnerships with local businesses and organizations</span>
                         </li>
                       </ul>
@@ -630,49 +638,49 @@ export default function GoToMarket() {
                 <div className="overflow-x-auto">
                   <table className="w-full border-collapse">
                     <thead>
-                      <tr className="bg-[#F9F8F4]">
-                        <th className="border border-[#E5E2D9] px-4 py-3 text-left text-sm font-medium text-[#333333]">Channel</th>
-                        <th className="border border-[#E5E2D9] px-4 py-3 text-left text-sm font-medium text-[#333333]">Pre-Leasing</th>
-                        <th className="border border-[#E5E2D9] px-4 py-3 text-left text-sm font-medium text-[#333333]">Initial Lease-Up</th>
-                        <th className="border border-[#E5E2D9] px-4 py-3 text-left text-sm font-medium text-[#333333]">Stabilization</th>
+                      <tr className="bg-novus-cream">
+                        <th className="border border-novus-border px-4 py-3 text-left text-sm font-medium text-text-primary">Channel</th>
+                        <th className="border border-novus-border px-4 py-3 text-left text-sm font-medium text-text-primary">Pre-Leasing</th>
+                        <th className="border border-novus-border px-4 py-3 text-left text-sm font-medium text-text-primary">Initial Lease-Up</th>
+                        <th className="border border-novus-border px-4 py-3 text-left text-sm font-medium text-text-primary">Stabilization</th>
                       </tr>
                     </thead>
                     <tbody className="text-sm">
                       <tr>
-                        <td className="border border-[#E5E2D9] px-4 py-3 font-medium">Paid Search/SEO</td>
-                        <td className="border border-[#E5E2D9] px-4 py-3">20%</td>
-                        <td className="border border-[#E5E2D9] px-4 py-3">15%</td>
-                        <td className="border border-[#E5E2D9] px-4 py-3">10%</td>
+                        <td className="border border-novus-border px-4 py-3 font-medium">Paid Search/SEO</td>
+                        <td className="border border-novus-border px-4 py-3">20%</td>
+                        <td className="border border-novus-border px-4 py-3">15%</td>
+                        <td className="border border-novus-border px-4 py-3">10%</td>
                       </tr>
-                      <tr className="bg-[#F9F8F4]">
-                        <td className="border border-[#E5E2D9] px-4 py-3 font-medium">Social Media</td>
-                        <td className="border border-[#E5E2D9] px-4 py-3">25%</td>
-                        <td className="border border-[#E5E2D9] px-4 py-3">20%</td>
-                        <td className="border border-[#E5E2D9] px-4 py-3">15%</td>
-                      </tr>
-                      <tr>
-                        <td className="border border-[#E5E2D9] px-4 py-3 font-medium">ILS Platforms</td>
-                        <td className="border border-[#E5E2D9] px-4 py-3">15%</td>
-                        <td className="border border-[#E5E2D9] px-4 py-3">25%</td>
-                        <td className="border border-[#E5E2D9] px-4 py-3">30%</td>
-                      </tr>
-                      <tr className="bg-[#F9F8F4]">
-                        <td className="border border-[#E5E2D9] px-4 py-3 font-medium">Events/Experiential</td>
-                        <td className="border border-[#E5E2D9] px-4 py-3">20%</td>
-                        <td className="border border-[#E5E2D9] px-4 py-3">25%</td>
-                        <td className="border border-[#E5E2D9] px-4 py-3">15%</td>
+                      <tr className="bg-novus-cream">
+                        <td className="border border-novus-border px-4 py-3 font-medium">Social Media</td>
+                        <td className="border border-novus-border px-4 py-3">25%</td>
+                        <td className="border border-novus-border px-4 py-3">20%</td>
+                        <td className="border border-novus-border px-4 py-3">15%</td>
                       </tr>
                       <tr>
-                        <td className="border border-[#E5E2D9] px-4 py-3 font-medium">Content Production</td>
-                        <td className="border border-[#E5E2D9] px-4 py-3">15%</td>
-                        <td className="border border-[#E5E2D9] px-4 py-3">10%</td>
-                        <td className="border border-[#E5E2D9] px-4 py-3">15%</td>
+                        <td className="border border-novus-border px-4 py-3 font-medium">ILS Platforms</td>
+                        <td className="border border-novus-border px-4 py-3">15%</td>
+                        <td className="border border-novus-border px-4 py-3">25%</td>
+                        <td className="border border-novus-border px-4 py-3">30%</td>
                       </tr>
-                      <tr className="bg-[#F9F8F4]">
-                        <td className="border border-[#E5E2D9] px-4 py-3 font-medium">Local Partnerships</td>
-                        <td className="border border-[#E5E2D9] px-4 py-3">5%</td>
-                        <td className="border border-[#E5E2D9] px-4 py-3">5%</td>
-                        <td className="border border-[#E5E2D9] px-4 py-3">15%</td>
+                      <tr className="bg-novus-cream">
+                        <td className="border border-novus-border px-4 py-3 font-medium">Events/Experiential</td>
+                        <td className="border border-novus-border px-4 py-3">20%</td>
+                        <td className="border border-novus-border px-4 py-3">25%</td>
+                        <td className="border border-novus-border px-4 py-3">15%</td>
+                      </tr>
+                      <tr>
+                        <td className="border border-novus-border px-4 py-3 font-medium">Content Production</td>
+                        <td className="border border-novus-border px-4 py-3">15%</td>
+                        <td className="border border-novus-border px-4 py-3">10%</td>
+                        <td className="border border-novus-border px-4 py-3">15%</td>
+                      </tr>
+                      <tr className="bg-novus-cream">
+                        <td className="border border-novus-border px-4 py-3 font-medium">Local Partnerships</td>
+                        <td className="border border-novus-border px-4 py-3">5%</td>
+                        <td className="border border-novus-border px-4 py-3">5%</td>
+                        <td className="border border-novus-border px-4 py-3">15%</td>
                       </tr>
                     </tbody>
                   </table>
@@ -680,7 +688,7 @@ export default function GoToMarket() {
               </div>
               
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 my-8">
-                <div className="bg-[#333333] text-white p-6 rounded-sm">
+                <div className="bg-text-primary text-white p-6 rounded-sm">
                   <h3 className="text-white mb-3">Team Structure</h3>
                   <ul className="list-disc pl-6 space-y-2">
                     <li>Dedicated Leasing Director (full-time)</li>
@@ -691,7 +699,7 @@ export default function GoToMarket() {
                   </ul>
                 </div>
                 
-                <div className="bg-[#333333] text-white p-6 rounded-sm">
+                <div className="bg-text-primary text-white p-6 rounded-sm">
                   <h3 className="text-white mb-3">Key Partners</h3>
                   <ul className="list-disc pl-6 space-y-2">
                     <li>Digital Marketing Agency (local with high-rise expertise)</li>
@@ -702,7 +710,7 @@ export default function GoToMarket() {
                   </ul>
                 </div>
                 
-                <div className="bg-[#333333] text-white p-6 rounded-sm">
+                <div className="bg-text-primary text-white p-6 rounded-sm">
                   <h3 className="text-white mb-3">Technology Stack</h3>
                   <ul className="list-disc pl-6 space-y-2">
                     <li>Property Management/CRM System</li>
