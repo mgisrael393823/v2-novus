@@ -35,11 +35,11 @@ export default function IntroSection() {
               The Novus Blueprint is a comprehensive strategic framework designed to optimize the lease-up process, identify competitive advantages, and provide actionable recommendations to maximize occupancy and rental revenue for the Five Points District/Downtown Durham market.
             </Paragraph>
             
-            <Button variant="default" size="xl" uppercase className="px-8">
-              <Link href="/executive-summary">
+            <Link href="/executive-summary">
+              <Button variant="default" size="xl" uppercase className="px-8">
                 EXPLORE BLUEPRINT
-              </Link>
-            </Button>
+              </Button>
+            </Link>
           </div>
         </div>
         
