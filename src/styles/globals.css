@@ -170,6 +170,14 @@ body {
 }
 
 @layer base {
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+
+  svg {
+    vertical-align: middle;
+  }
+
   * {
     @apply border-border;
   }
