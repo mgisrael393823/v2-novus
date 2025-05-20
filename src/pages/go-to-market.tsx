@@ -36,8 +36,8 @@ export default function GoToMarket() {
                 {/* Timeline points */}
                 <div className="relative z-10">
                   {/* Pre-Leasing Launch */}
-                  <div className="flex flex-col md:flex-row items-center mb-16 relative">
-                    <div className="md:w-1/2 md:pr-10 text-right order-2 md:order-1">
+                  <div className="flex flex-col md:grid md:grid-cols-[1fr_auto_1fr] items-center mb-16 gap-8">
+                    <div className="md:text-right md:pr-10 order-2 md:order-1">
                       <h3 className="text-xl font-semibold text-[#333333] mb-2">Pre-Leasing Launch</h3>
                       <p className="text-[#666666] font-bold mb-2">July 2025</p>
                       <ul className="text-[#666666] text-sm space-y-1">
@@ -47,10 +47,12 @@ export default function GoToMarket() {
                         <li>• Begin accepting refundable deposits</li>
                       </ul>
                     </div>
-                    <div className="absolute left-1/2 transform -translate-x-1/2 w-10 h-10 rounded-full bg-[#F9F8F4] border-4 border-[#CAB06B] flex items-center justify-center">
-                      <span className="font-bold text-[#CAB06B]">1</span>
+                    <div className="flex justify-center">
+                      <div className="w-10 h-10 rounded-full bg-[#F9F8F4] border-4 border-[#CAB06B] flex items-center justify-center">
+                        <span className="font-bold text-[#CAB06B]">1</span>
+                      </div>
                     </div>
-                    <div className="md:w-1/2 md:pl-10 md:mt-0 mt-4 order-1 md:order-2">
+                    <div className="md:pl-10 md:mt-0 mt-4 order-1 md:order-2">
                       <div className="bg-white border border-[#E5E2D9] p-4 rounded-md shadow-sm">
                         <h4 className="font-semibold text-[#333333] mb-2">Digital Marketing Focus</h4>
                         <ul className="text-sm text-[#666666] space-y-1">
@@ -64,8 +66,8 @@ export default function GoToMarket() {
                   </div>
                   
                   {/* Initial Leasing Goal */}
-                  <div className="flex flex-col md:flex-row items-center mb-16 relative">
-                    <div className="md:w-1/2 md:pr-10 text-right order-2 md:order-1">
+                  <div className="flex flex-col md:grid md:grid-cols-[1fr_auto_1fr] items-center mb-16 gap-8">
+                    <div className="md:text-right md:pr-10 order-2 md:order-1">
                       <div className="bg-white border border-[#E5E2D9] p-4 rounded-md shadow-sm">
                         <h4 className="font-semibold text-[#333333] mb-2">Marketing Initiatives</h4>
                         <ul className="text-sm text-[#666666] space-y-1">
@@ -76,10 +78,12 @@ export default function GoToMarket() {
                         </ul>
                       </div>
                     </div>
-                    <div className="absolute left-1/2 transform -translate-x-1/2 w-10 h-10 rounded-full bg-[#F9F8F4] border-4 border-[#CAB06B] flex items-center justify-center">
-                      <span className="font-bold text-[#CAB06B]">2</span>
+                    <div className="flex justify-center">
+                      <div className="w-10 h-10 rounded-full bg-[#F9F8F4] border-4 border-[#CAB06B] flex items-center justify-center">
+                        <span className="font-bold text-[#CAB06B]">2</span>
+                      </div>
                     </div>
-                    <div className="md:w-1/2 md:pl-10 md:mt-0 mt-4 order-1 md:order-2">
+                    <div className="md:pl-10 md:mt-0 mt-4 order-1 md:order-2">
                       <h3 className="text-xl font-semibold text-[#333333] mb-2">Initial Leasing Goal</h3>
                       <p className="text-[#666666] font-bold mb-2">October 2025 (First 3 months)</p>
                       <ul className="text-[#666666] text-sm space-y-1">
@@ -92,8 +96,8 @@ export default function GoToMarket() {
                   </div>
                   
                   {/* Secondary Leasing Phase */}
-                  <div className="flex flex-col md:flex-row items-center mb-16 relative">
-                    <div className="md:w-1/2 md:pr-10 text-right order-2 md:order-1">
+                  <div className="flex flex-col md:grid md:grid-cols-[1fr_auto_1fr] items-center mb-16 gap-8">
+                    <div className="md:text-right md:pr-10 order-2 md:order-1">
                       <h3 className="text-xl font-semibold text-[#333333] mb-2">Secondary Leasing Phase</h3>
                       <p className="text-[#666666] font-bold mb-2">November 2025 - January 2026</p>
                       <ul className="text-[#666666] text-sm space-y-1">
@@ -103,10 +107,12 @@ export default function GoToMarket() {
                         <li>• Weekly performance review & strategy adjustment</li>
                       </ul>
                     </div>
-                    <div className="absolute left-1/2 transform -translate-x-1/2 w-10 h-10 rounded-full bg-[#F9F8F4] border-4 border-[#CAB06B] flex items-center justify-center">
-                      <span className="font-bold text-[#CAB06B]">3</span>
+                    <div className="flex justify-center">
+                      <div className="w-10 h-10 rounded-full bg-[#F9F8F4] border-4 border-[#CAB06B] flex items-center justify-center">
+                        <span className="font-bold text-[#CAB06B]">3</span>
+                      </div>
                     </div>
-                    <div className="md:w-1/2 md:pl-10 md:mt-0 mt-4 order-1 md:order-2">
+                    <div className="md:pl-10 md:mt-0 mt-4 order-1 md:order-2">
                       <div className="bg-white border border-[#E5E2D9] p-4 rounded-md shadow-sm">
                         <h4 className="font-semibold text-[#333333] mb-2">Marketing Initiatives</h4>
                         <ul className="text-sm text-[#666666] space-y-1">
@@ -120,8 +126,8 @@ export default function GoToMarket() {
                   </div>
                   
                   {/* Stabilization Goal */}
-                  <div className="flex flex-col md:flex-row items-center relative">
-                    <div className="md:w-1/2 md:pr-10 text-right order-2 md:order-1">
+                  <div className="flex flex-col md:grid md:grid-cols-[1fr_auto_1fr] items-center relative gap-8">
+                    <div className="md:text-right md:pr-10 order-2 md:order-1">
                       <div className="bg-white border border-[#E5E2D9] p-4 rounded-md shadow-sm">
                         <h4 className="font-semibold text-[#333333] mb-2">Ongoing Marketing</h4>
                         <ul className="text-sm text-[#666666] space-y-1">
@@ -133,10 +139,12 @@ export default function GoToMarket() {
                         </ul>
                       </div>
                     </div>
-                    <div className="absolute left-1/2 transform -translate-x-1/2 w-10 h-10 rounded-full bg-[#F9F8F4] border-4 border-[#CAB06B] flex items-center justify-center">
-                      <span className="font-bold text-[#CAB06B]">4</span>
+                    <div className="flex justify-center">
+                      <div className="w-10 h-10 rounded-full bg-[#F9F8F4] border-4 border-[#CAB06B] flex items-center justify-center">
+                        <span className="font-bold text-[#CAB06B]">4</span>
+                      </div>
                     </div>
-                    <div className="md:w-1/2 md:pl-10 md:mt-0 mt-4 order-1 md:order-2">
+                    <div className="md:pl-10 md:mt-0 mt-4 order-1 md:order-2">
                       <h3 className="text-xl font-semibold text-[#333333] mb-2">Stabilization Goal</h3>
                       <p className="text-[#666666] font-bold mb-2">January 2027 (18 months total)</p>
                       <ul className="text-[#666666] text-sm space-y-1">
